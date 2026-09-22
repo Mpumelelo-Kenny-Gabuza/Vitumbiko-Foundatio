@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate — Vitumbiko Foundation</title>
+  <meta name="description" content="Donate to Vitumbiko Foundation via mobile money or card.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="/assets/Vitumbiko-removebg-preview - Copy,.png" type="image/png">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="/assets/Vitumbiko-removebg-preview - Copy,.png" alt="Vitumbiko Foundation logo" width="120"
+          height="40">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../programs/index.html">Programs</a></li>
+          <li><a href="index.html">Get Involved</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a class="btn btn--primary" href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">Get Involved / Donate</p>
+        <h1>Give to Vitumbiko Foundation</h1>
+        <p class="lead">Every contribution is applied solely to our charitable objects: women's empowerment, health and
+          wellness, and youth development.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="donate-options">
+
+          <!-- Local: mobile money -->
+          <div class="card">
+            <h3>Donate in Malawi</h3>
+            <p>Give via mobile money or bank transfer. Choose an amount below, then follow the instructions.</p>
+
+            <form class="form" onsubmit="return false;">
+              <div class="field">
+                <label for="donation-amount">Amount (MWK)</label>
+                <input type="number" id="donation-amount" name="amount" min="100" step="50" placeholder="e.g. 5000">
+              </div>
+              <div class="amount-grid" role="group" aria-label="Quick amounts">
+                <button type="button" data-amount="1000" aria-pressed="false">K1,000</button>
+                <button type="button" data-amount="5000" aria-pressed="false">K5,000</button>
+                <button type="button" data-amount="10000" aria-pressed="false">K10,000</button>
+                <button type="button" data-amount="50000" aria-pressed="false">K50,000</button>
+              </div>
+              <p class="form__note">Payments processed via PayChangu. You'll be redirected to complete your donation.
+              </p>
+              <button class="btn btn--primary btn--block" type="button" aria-disabled="true">Continue to PayChangu
+                (placeholder)</button>
+            </form>
+
+            <h4 class="mt-4">Or pay directly</h4>
+            <ul class="mobile-money-list">
+              <li><strong>Airtel Money:</strong> Placeholder merchant code — TBC</li>
+              <li><strong>TNM Mpamba:</strong> Placeholder merchant code — TBC</li>
+              <li><strong>Bank transfer:</strong> Placeholder bank details — TBC</li>
+            </ul>
+          </div>
+
+          <!-- International: card -->
+          <div class="card">
+            <h3>Donate from abroad</h3>
+            <p>Use a card, Apple Pay, or Google Pay. Multi-currency supported.</p>
+            <a class="btn btn--primary btn--block" href="#" aria-disabled="true">Donate via Stripe (placeholder)</a>
+            <p class="form__note mt-4">Placeholder — replace with your live Stripe Payment Link once your account is set
+              up.</p>
+
+            <h4 class="mt-4">Why give?</h4>
+            <ul>
+              <li>K5,000 funds a financial literacy session for one woman.</li>
+              <li>K10,000 funds a confidential counseling session.</li>
+              <li>K25,000 funds a week of internet for the youth hub.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="form__note mt-5">Vitumbiko Foundation Limited is a company limited by guarantee. All donations are
+          applied solely to the promotion of our objects. No portion is distributed to members.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Vitumbiko Foundation Limited</h4>
+          <p>Reg. No. COYG-Q4AFV5L</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>P.O. Box 92, Mzuzu Code</li>
+            <li>Mzimba Boma – 104100</li>
+            <li><a href="tel:+265999635556">+265 999 635 556</a></li>
+            <li><a href="mailto:info@vitumbikofoundation.org">info@vitumbikofoundation.org</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../programs/index.html">Programs</a></li>
+            <li><a href="../.html"></a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="../legal/terms.html">Terms of Use</a></li>
+            <li><a href="../legal/safeguarding.html">Safeguarding Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Vitumbiko Foundation Limited. All rights reserved.</span>
+      <span>Developed by <a href="https://mlifi.co.za" target="_blank" rel="noopener noreferrer">Mlifi Solutions</a></span>
+    </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
