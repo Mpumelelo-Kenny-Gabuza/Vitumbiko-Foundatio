@@ -19,7 +19,7 @@
 
 /* ---------- 2. Design tokens ---------------------------------------------- */
 :root {
-  --red-900: #7A1010;
+  --red-900: rgb(52, 52, 172);
   --red-700: #B31B1B;
   --red-500: #E63946;
   --sun-500:   #E8A33D;
@@ -72,7 +72,7 @@ body {
   width: 100%;
   height: auto;
 }
-img, svg { max-width: 50%; display: block; height: auto; }
+img, svg { max-width: 100%; display: block; height: auto; }
 a { color: var(--red-700); text-decoration: none; }
 a:hover { color: var(--red-900); text-decoration: underline; }
 button { font: inherit; cursor: pointer; }
@@ -157,25 +157,30 @@ p  { margin: 0 0 var(--space-3); }
 /* ---------- 7. Header / Nav ---------------------------------------------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: #faf6eff5;
+  background: #fff;
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(20,17,14,0.06);
 }
 .site-header__inner {
   display: flex; align-items: center; justify-content: space-between;
-  padding: var(--space-3) 0;
+  /* padding: var(--space-3) 0; */
 }
+/* .brand__logo {
+  width: 36px; height: 36px;
+} */
+
 .brand {
-  display: flex; align-items: center; gap: 0.6rem;
+  /* display: flex; align-items: center; gap: 0.6rem;
   font-family: var(--font-head); font-weight: 700;
-  font-size: 1.15rem; color: var(--red-900);
+  font-size: 1.15rem; color: var(--red-900); */
 }
 .brand:hover { text-decoration: none; color: var(--red-900); }
-.brand__mark {
-  width: 36px; height: 36px; border-radius: 50%;
+.brand__logo {
+  /* max-width: 100%; height: 100%; display: block; */
+  /* width: 36px; height: 36px; border-radius: 50%;
   background: var(--red-700); color: var(--sun-500);
   display: grid; place-items: center;
-  font-family: var(--font-head); font-weight: 700; font-size: 1rem;
+  font-family: var(--font-head); font-weight: 700; font-size: 1rem; */
 }
 .nav-toggle {
   display: inline-flex; flex-direction: column; gap: 5px;
@@ -337,3 +342,85 @@ p  { margin: 0 0 var(--space-3); }
   .site-header, .site-footer, .btn, .nav-toggle { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* ---------- 18. Donation cards -------------------------------------------- */
+.donate-cards {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .donate-cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+.donate-card {
+  background: var(--white);
+  border: 1px solid rgba(20,17,14,0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.donate-card__logo {
+  height: 56px;
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--space-3);
+}
+.donate-card__logo-text {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--red-700);
+  letter-spacing: 0.02em;
+}
+.donate-card__logo-text--givengain {
+  color: #1E88C7;
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+.donate-card__logo-text--backabuddy {
+  color: #6B2E8A;
+}
+
+.donate-card__title {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-2);
+}
+
+.donate-card__intro {
+  font-size: 0.95rem;
+  color: var(--ink-500);
+  margin-bottom: var(--space-3);
+}
+
+.donate-card__details {
+  background: var(--linen);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  text-align: left;
+  font-size: 0.9rem;
+  margin-bottom: var(--space-3);
+}
+.donate-card__details p {
+  margin: 0 0 0.4rem;
+}
+.donate-card__details p:last-child { margin-bottom: 0; }
+
+.donate-card__note {
+  font-size: 0.8rem;
+  color: var(--ink-500);
+  margin-bottom: var(--space-2);
+}
+.donate-card__note em { font-style: italic; }
+
+.donate-card__cta {
+  margin-top: auto;
+  margin-bottom: var(--space-2);
+}
+
+/* Linen section variant used on the closing block */
+.section--linen { background: var(--linen); }
